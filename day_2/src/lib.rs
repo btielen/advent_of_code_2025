@@ -78,7 +78,7 @@ fn bruteforce_solution_part_1(input: &str) -> u64 {
 }
 
 /// Brute-force solution for Part 2: sum all invalid IDs across the input ranges.
-fn bruteforece_solution_part_2(input: &str) -> u64 {
+fn bruteforce_solution_part_2(input: &str) -> u64 {
     let mut total = 0;
     let ranges: Vec<&str> = input.split(',').collect();
 
@@ -140,7 +140,7 @@ mod tests {
     #[test]
     fn test_solution_part_2_sample_input() {
         assert_eq!(
-            bruteforece_solution_part_2(include_str!("sample_input.txt")),
+            bruteforce_solution_part_2(include_str!("sample_input.txt")),
             4174379265
         )
     }
