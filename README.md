@@ -4,13 +4,13 @@ This repository is a workspace for solving Advent of Code 2025 in Rust. A new cr
 
 ### Current status
 - Implemented: Day 1 — Secret Entrance (both parts)
+- Implemented: Day 2 — Gift Shop (both parts)
 
 ---
 ## Repository layout
 - `Cargo.toml` — Workspace manifest listing all day crates under `members`.
 - `day_1/` — Crate for Day 1
   - `src/lib.rs` — Core solution and tests.
-  - `src/input.txt` — Personal puzzle input for Day 1.
   - `src/sample_input.txt` — Sample input from the problem statement.
 
 ### Toolchain
