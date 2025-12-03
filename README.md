@@ -5,6 +5,8 @@ This repository is a workspace for solving Advent of Code 2025 in Rust. A new cr
 ### Current status
 - Implemented: Day 1 — Secret Entrance (both parts)
 - Implemented: Day 2 — Gift Shop (both parts)
+- Implemented: Day 3 — Lobby (both parts)
+
 
 ---
 ## Repository layout
