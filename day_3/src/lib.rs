@@ -32,8 +32,10 @@ impl From<&str> for Bank {
 /// - `n` must be in `0..=bank.len()`. Panics if `n` is larger than the bank size.
 /// - If `n == 0`, returns `0`.
 fn max_jolts(bank: &Bank, n: usize) -> u64 {
-
-    assert!(bank.0.len() >= n, "The value of n must be smaller than bank size");
+    assert!(
+        bank.0.len() >= n,
+        "The value of n must be smaller than bank size"
+    );
 
     if n == 0 {
         return 0;
@@ -44,14 +46,16 @@ fn max_jolts(bank: &Bank, n: usize) -> u64 {
     let len = bank.0.len();
 
     for i in 0..n {
-        let new_max_index = first_max_value_index(&bank.0[last_index..len-n+i+1]) + last_index;
+        let new_max_index =
+            first_max_value_index(&bank.0[last_index..len - n + i + 1]) + last_index;
         max_indexes.push(new_max_index);
         last_index = new_max_index + 1;
     }
 
-    max_indexes.iter()
+    max_indexes
+        .iter()
         .enumerate()
-        .map(|(pow, &i)| bank.0[i] as u64 * (10u64).pow(n as u32 - pow as u32 - 1) )
+        .map(|(pow, &i)| bank.0[i] as u64 * (10u64).pow(n as u32 - pow as u32 - 1))
         .sum()
 }
 
@@ -89,8 +93,6 @@ fn solution(input: &str, n: usize) -> u64 {
         .sum()
 }
 
-
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -119,7 +121,6 @@ mod tests {
         assert_eq!(max_jolts(&bank, 12), 987654321111);
     }
 
-
     #[test]
     fn test_solution_part_1() {
         assert_eq!(solution(include_str!("sample_input.txt"), 2), 357);
@@ -127,6 +128,9 @@ mod tests {
 
     #[test]
     fn test_solution_part_2() {
-        assert_eq!(solution(include_str!("sample_input.txt"), 12), 3121910778619);
+        assert_eq!(
+            solution(include_str!("sample_input.txt"), 12),
+            3121910778619
+        );
     }
 }
