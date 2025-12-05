@@ -7,6 +7,7 @@ This repository is a workspace for solving Advent of Code 2025 in Rust. A new cr
 - Implemented: Day 2 — Gift Shop (both parts)
 - Implemented: Day 3 — Lobby (both parts)
 - Implemented: Day 4 — Printing Department (both parts)
+- Implemented: Day 5 — Cafeteria (both parts)
 
 
 ---
