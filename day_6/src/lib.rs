@@ -56,9 +56,7 @@ fn parse_numbers(input: &str) -> Result<Vec<u64>, Day6Error> {
 
 /// Read the first item from a reversed line iterator (which is the original
 /// bottom line) and parse its tokens as `Operator`s.
-fn get_operators<'a>(
-    mut iter: impl Iterator<Item = &'a str>,
-) -> Result<Vec<Operator>, Day6Error> {
+fn get_operators<'a>(mut iter: impl Iterator<Item = &'a str>) -> Result<Vec<Operator>, Day6Error> {
     iter.next()
         .ok_or(Day6Error::EmptyInput)?
         .split_whitespace()
