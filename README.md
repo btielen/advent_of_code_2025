@@ -9,7 +9,7 @@ This repository is a workspace for solving Advent of Code 2025 in Rust. A new cr
 - Implemented: Day 4 — Printing Department (both parts)
 - Implemented: Day 5 — Cafeteria (both parts)
 - Implemented: Day 6 — Trash Compactor (both parts)
-- Implemented: Day 7 — Trash Compactor (both parts)
+- Implemented: Day 7 — Laboratories (both parts)
 
 
 ---
